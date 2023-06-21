@@ -1,0 +1,53 @@
+
+
+
+Turning a web page into a executable local file , 
+using electron. 
+
+install electron through npm as such , 
+
+
+
+
+Setps. 
+1. - use 
+-npm init - 
+in the terminal , 
+and go through all the lines 
+
+
+2. npm install electron --save
+
+
+3.   go to the electron docs page and get ther intialization 
+code from "  writing your first electron app. " 
+----- the main.js ,on the page , 
+---- in to your 
+init.js file.    ------ or just copy the code here . 
+
+
+4.  In the package-json file ,     Make SURE , after all of the JavaScript code is copied into the .init file , that the main entry point is set to the init.js file , 
+like so. 
+--------------------------
+  "description": "",
+  "main": "init.js",
+  "scripts": {  "start": "electron .",
+   
+    "build": "electron-packager ." }
+    -------------------------------------------
+
+
+.5 Modify the package.json file 
+scripts , to contain    
+---------------------------------------------------------
+"scripts": {
+                                  --- this will set the command for npm start  
+    "start": "electron ."
+  },---------------------------------------------------------
+
+-------------------------------------------------------------------
+
+.... npm start will launch (not package )
+ the application .
+ 
+ npm run build packages everything in a local file , click the .exe to run it locally.

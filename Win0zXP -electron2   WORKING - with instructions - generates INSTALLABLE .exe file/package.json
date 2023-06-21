@@ -1,0 +1,44 @@
+{
+  "name": "win0zxp--electron2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./install-script/install.js",
+  "scripts": {
+    "preinstall": "node ./install-script/install.js",
+    "start": "electron .",
+    "build": "electron-packager ./ --win --x64 --universal --pd  && electron-builder . "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-packager": "^17.1.1"
+  },
+  "devDependencies": {
+    "electron": "^25.1.1",
+    "electron-builder": "^24.4.0"
+  },
+
+  "build": "install-script/install.js",
+  "appId": "com.yourapp.app",
+  "directories": {
+    "output": "dist"
+  },
+  "win": {
+    "target": "nsis"
+  },
+  "mac": {
+    "target": "dmg"
+  },
+  "linux": {
+    "target": "AppImage"
+  },
+  "extraResources": [
+    {
+      "from": "./install-script",
+      "to": "./install-script"
+    }
+  ]
+}
+
+
+

@@ -1,0 +1,16 @@
+{
+  "name": "win0zxp--electron2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "init.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^25.1.0",
+    "electron-packager": "^17.1.1"
+  }
+}
